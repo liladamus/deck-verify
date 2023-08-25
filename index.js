@@ -54,7 +54,7 @@ function generateSalt() {
 
 // Function to post a gist to GitHub
 async function postGist(salt) {
-  const token = "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"; // Replace with your GitHub Personal Access Token
+  const token = "<YOUR GITHUB TOKEN>"; // Replace with your GitHub Personal Access Token
   const headers = {
     Authorization: `token ${token}`,
     Accept: "application/vnd.github.v3+json",
