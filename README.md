@@ -1,32 +1,30 @@
+# Onchain Poker Bot
 
-# Deck Verification Tool
+A tool to generate and verify decks for onchain poker.
 
-This project helps you generate a shuffled deck, a unique salt, hashes them together, and posts the salt to a private Gist. It also allows you to verify a deck and salt against a hash.
+## Installation
 
-## Setup
+To install the Onchain Poker Bot, you need to have [Node.js and npm](https://nodejs.org/) installed on your system.
 
-1. Clone this repository.
-2. Install the required Node.js packages:
+Once you have them set up, run the following command:
 
 ```bash
-npm install axios crypto
+npm install -g onchain-poker-bot
 ```
 
-3. Create a [GitHub Personal Access Token](https://github.com/settings/tokens/new) with the `gist` scope. Replace `'YOUR_GITHUB_PERSONAL_ACCESS_TOKEN'` in the `index.js` file with your actual token.
+This will install the tool globally on your system, allowing you to access the `generate-deck` and `verify-deck` commands from any terminal or command prompt.
 
 ## Usage
 
-There are two primary commands you can run:
+### 1. Generating a Deck
 
-### 1. Generating a Deck, Salt, and Hash
-
-To create a shuffled deck, generate a salt, hash the deck and salt together, and post the salt to a private Gist:
+To create a shuffled deck, generate a salt, hash the deck and salt together, and post the salt to a private Gist, run:
 
 ```bash
-node index.js
+generate-deck
 ```
 
-This will give you output similar to:
+This command will provide output similar to:
 
 ```
 Deck Order: [
@@ -36,25 +34,28 @@ Gist Link: https://gist.github.com/yourusername/randomgistid
 Hashed Deck with Salt: somehashedvalue
 ```
 
-Remember to save the Deck Order and Hashed Deck with Salt. Share the Gist link with players, so they can access the salt after the game.
+Save the Deck Order and Hashed Deck with Salt. Share the Gist link with players, so they can access the salt after the game.
 
-### 2. Verifying a Deck and Salt
+### 2. Verifying a Deck
 
-To verify that a given deck and salt match a specific hash, you can use the `test-hash.js` script. For this script to work, you need to have `index.js` in the same directory.
+To verify that a given deck and salt match a specific hash, use:
 
 ```bash
-node test-hash.js
+verify-deck
 ```
 
-You should see:
+On successful verification, you will see:
 
 ```
-index.js imported as a module
 The deck and salt are valid!
 ```
 
-This means that the deck and salt provided in the script match the original hash, ensuring the game was fair and pre-determined.
+This confirmation means that the provided deck and salt match the original hash, ensuring the game was fair and pre-determined.
 
----
+## License
 
-I hope this README helps guide users in using the project effectively!
+MIT
+
+## Contributing
+
+Contributions are welcome! Please open an issue if you have any feature ideas or find any bugs.
