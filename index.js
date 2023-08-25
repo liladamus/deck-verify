@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const axios = require("axios");
 const crypto = require("crypto");
 
@@ -52,7 +54,7 @@ function generateSalt() {
 
 // Function to post a gist to GitHub
 async function postGist(salt) {
-  const token = "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"; // Replace with your GitHub Personal Access Token
+  const token = "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"; // Replace with your GitHub Personal Access Token
   const headers = {
     Authorization: `token ${token}`,
     Accept: "application/vnd.github.v3+json",

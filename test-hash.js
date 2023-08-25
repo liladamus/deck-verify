@@ -1,24 +1,27 @@
+#!/usr/bin/env node
+
 const { verifyDeckAndSalt } = require("./index");
 
-// test for pre-generated deck on this address: https://gist.github.com/iamsoorena/6d5640fd31bd9156892d9ec999d776ee
+// test for pre-generated deck on this address: https://gist.github.com/liladamus/c69b532648d79fec0b974062066c3887
 // start of the game players receive the deck hash
-// cece6931bf419a9d0d55bf6f932bcf958954cf5fafe89def3f6d9036dd8470e2
+// 000b0f128bb7a08c7b9ac46801d1758465213c4c36236fad0aff8545a3e2f157
 // at the end of the game players receive the deck and salt
 
 const deck = [
-    '10C', '6H', '4S', '10D', '10H', '6S',  '9C',
-    '8C',  '7S', '4C', 'KD',  '8H',  '5S',  '3D',
-    '8S',  'QC', '9S', '8D',  '9D',  '4H',  '2H',
-    'QH',  '5C', 'AD', '3C',  '3S',  'KS',  'JH',
-    '7H',  'JC', '3H', 'QS',  '5H',  '10S', '2S',
-    '7D',  '2C', '9H', 'QD',  '6C',  'JD',  '6D',
-    'AS',  '7C', 'KH', 'AH',  '4D',  '2D',  'KC',
-    'AC',  'JS', '5D'
+      'KS', '2H',  '3H', '7D', 'KD', '7S',  'JH',
+      '5C', '5H',  'AC', 'QS', 'QH', '10S', '4S',
+      '8S', 'KC',  '9S', '3S', '5D', 'QC',  '7H',
+      '8C', '10C', '4C', '6C', '2S', '2D',  '3D',
+      '3C', '10D', '7C', 'QD', 'JC', '6D',  '9H',
+      '5S', '9C',  'AD', '4D', '9D', 'KH',  '6S',
+      '6H', '10H', 'AS', 'JD', '8D', 'AH',  '2C',
+      'JS', '4H',  '8H'
   ]
+
 ;
 
-const salt = "b0631d515f364377d55dcafd07f8c5c8"; // The salt revealed after the game
-const hash = "cece6931bf419a9d0d55bf6f932bcf958954cf5fafe89def3f6d9036dd8470e2"; // The original hash (from `hashDeckWithSalt` function)
+const salt = "36e11988b496b37cf3aed60d4c7e19e6"; // The salt revealed after the game
+const hash = "000b0f128bb7a08c7b9ac46801d1758465213c4c36236fad0aff8545a3e2f157"; // The original hash (from `hashDeckWithSalt` function)
 
 const isValid = verifyDeckAndSalt(deck, salt, hash);
 console.log(

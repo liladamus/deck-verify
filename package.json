@@ -1,19 +1,21 @@
 {
   "name": "onchain-poker-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "A tool to generate and verify decks for onchain poker.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate-deck": "node index.js",
-    "verify-deck": "node test-hash.js"
+  "bin": {
+    "generate-deck": "./index.js",
+    "verify-deck": "./test-hash.js"
   },
-  "keywords": [],
-  "author": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["poker", "onchain", "deck", "verification"],
+  "author": "Your Name",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.4.0",
-    "crypto": "^1.0.1",
-    "prettier": "^3.0.2"
+    "axios": "^0.21.1",
+    "crypto": "builtin",
+    "prettier": "^2.4.1"
   }
 }
