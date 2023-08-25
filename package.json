@@ -1,6 +1,6 @@
 {
   "name": "onchain-poker-bot",
-  "version": "1.4.2",
+  "version": "1.4.22",
   "description": "A tool to generate and verify decks for onchain poker.",
   "main": "index.js",
   "bin": {
@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
-    "crypto": "builtin",
+    "crypto": "1.0.1",
     "prettier": "^2.4.1"
   }
 }
