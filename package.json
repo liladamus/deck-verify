@@ -1,6 +1,6 @@
 {
   "name": "onchain-poker-bot",
-  "version": "1.0.0",
+  "version": "1.4.2",
   "description": "A tool to generate and verify decks for onchain poker.",
   "main": "index.js",
   "bin": {
